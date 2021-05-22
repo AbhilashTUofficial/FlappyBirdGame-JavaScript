@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #24272e;;
+    padding: 20px;
+}
+header >h1{
+    color:white;
+    text-align: center;
+    font-family:  sans-serif;
+}
+body{
+    background-color: skyblue;
+}
+#game{
+    width: 800px;
+    height: 600px;
+    border: 2px solid #24272e;
+    border-radius: 10px;
+    margin:80px auto;
+    overflow: hidden;
+}
+
+#block_A{
+    animation: blockAnime 2s infinite linear;
+
+}
+#block_B{
+    background-color: rebeccapurple;
+
+    animation: blockAnime 3s infinite linear;
+
+}
+@keyframes blockAnime {
+    0%{left: 800px;}
+    100%{left: -50px;}
+}
+@keyframes hole-top-bottom {
+    0%{left: 786px;}
+    100%{left: -64px;}
+}
+.hole{
+    width: 50px;
+    height: 150px; 
+    background-color:skyblue;
+    position: relative;
+    left: 800px;
+    top: -600px;
+}
+#hole_A{
+    animation: blockAnime 2s infinite linear;
+}
+#hole_B{
+    animation: blockAnime 3s infinite linear;
+}
+.block-bottom{
+    width: 80px;
+    height: 20px; 
+    background-image: linear-gradient(to right,rgb(27, 105, 27) , rgb(0, 163, 0),rgb(27, 105, 27));
+    position: relative;
+    left: 800px;
+    top: -600px;
+}
+#block-bottom_A{
+    animation: hole-top-bottom 2s infinite linear;
+}
+#block-bottom_B{
+    animation: hole-top-bottom 3s infinite linear;
+}
+.block-top{
+    width: 80px;
+    height: 20px; 
+    background-image: linear-gradient(to right,rgb(27, 105, 27) , rgb(0, 163, 0),rgb(27, 105, 27));
+    position: relative;
+    left: 800px;
+    top: -600px;
+}
+#block-top_A{
+    animation: hole-top-bottom 2s infinite linear;
+
+}
+#block-top_B{
+    animation: hole-top-bottom 3s infinite linear;
+
+}
+#bird{
+    background-image: url('rock.png');
+    position:absolute;
+    top: 200px;
+    transition: none;
+    transform:rotate(20deg);
+}
+#game-over-label{
+    color: red;
+    font-size: 62px;
+    position: relative;
+    top: -530px;
+    left: 260px;
+}
+
+.block {
+    position: relative;
+    width: 50px;
+    height: 600px;
+    background-image: linear-gradient(to right,rgb(27, 105, 27) , rgb(0, 163, 0),rgb(27, 105, 27));
+    left: 800px;
+    transition: ease-in;
+}
